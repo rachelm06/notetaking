@@ -15,7 +15,6 @@ class NoteTakingApp extends StatelessWidget {
         body: NoteList(),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            // Generate a sample note and add it to the list
             Note newNote = PersonalNote(
               title: 'New Note ${DateTime.now().toString()}',
               content: 'Sample excerpt text goes here',
@@ -31,7 +30,6 @@ class NoteTakingApp extends StatelessWidget {
   }
 }
 
-// Base class for a Note
 class Note {
   final String title;
   final String content;
@@ -44,7 +42,6 @@ class Note {
   });
 }
 
-// Derived class (PersonalNote) with urgency represented as a boolean
 class PersonalNote extends Note {
   final bool isUrgent;
 
@@ -94,10 +91,8 @@ class NoteListState extends State<NoteList> {
     );
   }
 
-  // Function to add a new note to the list
   static void addNewNote(Note newNote) {
     notes.add(newNote);
-    // Update the UI to reflect the new note
     
 
     
